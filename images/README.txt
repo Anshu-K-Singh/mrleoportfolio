@@ -1,0 +1,1 @@
+Optional poster thumbnails for portfolio videos go here. Use matching names such as restaurant-01.jpg, fitness-01.jpg and showreel.jpg. See VIDEO-ADDING-GUIDE.txt in the Portfolio folder for the complete video filename list.

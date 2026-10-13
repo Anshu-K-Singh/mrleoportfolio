@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mr. Leo Management | We Turn Content Into Sales</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--card:#111214;--line:#343638;--text:#f5f5f0;--mute:#929292;--acc:#b7ff00;--acc2:#777777;--teal:#b7ff00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="dark"]){}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#09090b}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--text);font:400 15px/1.6 Inter,system-ui,sans-serif}
+body:before{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;background-image:url("leo-logo.jpeg");background-repeat:no-repeat;background-position:center center;background-size:min(78vw,980px) auto;opacity:.06;mix-blend-mode:screen}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'Bebas Neue',Impact,sans-serif;font-size:13px;letter-spacing:.12em;color:var(--mute)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.logo,.stats b{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700}
+h1,h2,h3{line-height:1.05;letter-spacing:-.01em}
+h1{font-size:clamp(44px,8vw,92px)}
+h1 em{font-style:normal;color:var(--acc)}
+h2{font-size:clamp(34px,5vw,56px);margin:8px 0 12px}
+h3{font-size:24px;margin-bottom:8px}
+section{padding:72px 0}
+.lead{color:var(--mute);max-width:560px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(9,9,11,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-size:20px}
+.logo small{display:block;font:400 12px 'Bebas Neue',Impact,sans-serif;color:var(--teal);letter-spacing:.14em}
+nav ul{display:flex;gap:22px;list-style:none;padding:0}
+nav ul a{color:var(--mute);font-size:13px}
+@media(max-width:700px){nav ul{display:none}}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:500;font-size:14px;border:1px solid var(--line);cursor:pointer;background:transparent;color:var(--text);font-family:inherit}
+.btn.p{background:var(--acc);color:#0a0a0a;border-color:var(--acc)}
+.btn:focus-visible,summary:focus-visible,.chip:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.hero{padding-top:80px}
+.hero{position:relative;isolation:isolate}
+.hero:before{content:none}
+.hero p{margin:20px 0 28px;max-width:520px;color:var(--mute)}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:48px}
+.stats div{background:var(--card);padding:20px}
+.stats b{font-size:clamp(32px,4.5vw,48px);line-height:1.1;display:block;color:var(--acc)}
+.stats .mono{display:block;margin-top:8px;font-size:9px}
+.brand-lockup{display:flex;align-items:center;gap:10px}
+.brand-mark{width:48px;height:48px;display:block;object-fit:cover;background:#000;border:1px solid var(--line);border-radius:6px}
+.brand-name{display:block}
+.growth-panel{margin-top:30px;padding:clamp(20px,4vw,36px);border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,rgba(183,255,0,.055),transparent 42%),var(--card)}
+.growth-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.growth-columns{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.growth-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.growth-images{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.proof-image-slot{position:relative;aspect-ratio:4/5;overflow:hidden;border:1px dashed #555;background:linear-gradient(145deg,#17191a,#0c0d0e);display:grid;place-items:center;text-align:center}
+.proof-image-slot.after-slot{border-color:rgba(183,255,0,.5)}
+.proof-image-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proof-image-slot span{padding:8px;color:var(--mute);font:400 13px 'Bebas Neue',Impact,sans-serif;letter-spacing:.1em}
+.proof-image-slot.after-slot span{color:var(--acc)}
+.growth-caption{display:flex;justify-content:space-between;gap:7px;margin:7px 0 14px}
+.growth-caption span{font:400 12px 'Bebas Neue',Impact,sans-serif;letter-spacing:.1em;color:var(--mute)}
+.growth-caption span:last-child{color:var(--acc)}
+.growth-numbers{border-top:1px solid var(--line);padding-top:8px}
+.growth-numbers .growth-metric{font-size:11px;padding:8px 0}
+.growth-numbers .growth-metric b{font-size:14px}
+.growth-side{padding:22px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.2)}
+.growth-side.after{border-color:rgba(183,255,0,.55);background:linear-gradient(145deg,rgba(183,255,0,.08),transparent 70%)}
+.growth-side h3{font:400 16px 'Bebas Neue',Impact,sans-serif;letter-spacing:.13em;color:var(--mute);margin:0 0 16px}
+.growth-side.after h3{color:var(--acc)}
+.growth-metric{display:flex;justify-content:space-between;gap:15px;padding:11px 0;border-top:1px solid var(--line);font-size:13px}
+.growth-metric b{font:700 19px 'Space Grotesk',Arial,sans-serif}
+.growth-arrow{align-self:center;color:var(--acc);font-size:25px}
+.growth-foot{margin-top:15px;color:var(--mute);font-size:12px}
+.capacity-note{display:flex;align-items:center;gap:12px;margin-top:22px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;color:var(--mute);font-size:13px}
+.capacity-note b{flex:none;color:var(--acc);font:700 23px 'Space Grotesk',Arial,sans-serif}
+.usp-callout{display:flex;align-items:center;gap:16px;max-width:780px;margin:26px 0 0;padding:15px 19px;border:1px solid rgba(183,255,0,.52);border-left:4px solid var(--acc);border-radius:8px;background:linear-gradient(100deg,rgba(183,255,0,.12),rgba(183,255,0,.025));box-shadow:0 0 34px rgba(183,255,0,.07)}
+.usp-callout strong{font:700 17px/1.3 'Space Grotesk',Arial,sans-serif;color:var(--text)}
+.usp-callout .mono{flex:none;color:var(--acc)}
+/* placeholders */
+.ph{position:relative;background:repeating-linear-gradient(45deg,#15151b,#15151b 14px,#181820 14px,#181820 28px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mute);overflow:hidden}
+.ph span{font:400 14px 'Bebas Neue',Impact,sans-serif;padding:6px 10px;background:rgba(0,0,0,.68);border-radius:6px;letter-spacing:.11em;line-height:1.5}
+.reel{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:48px;background:var(--card)}
+.player{aspect-ratio:16/9;cursor:pointer;width:100%}
+.player video,.player iframe{width:100%;height:100%;border:0;display:block;background:#000}
+.play{position:absolute;width:72px;height:72px;border-radius:50%;background:var(--acc);display:grid;place-items:center;border:0;cursor:pointer}
+.play:after{content:"";border-left:20px solid #0a0a0a;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+.reelbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:14px 18px;border-top:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:32px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card p{color:var(--mute);font-size:14px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.proof-card{position:relative;display:flex;flex-direction:column;min-height:265px;background:linear-gradient(145deg,rgba(183,255,0,.07),transparent 50%),var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.proof-card blockquote{font:500 20px/1.4 Inter,Arial,sans-serif;margin:24px 0;color:var(--text)}
+.proof-card .result{margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.proof-card .result b{display:block;color:var(--acc);font:700 29px/1.15 'Space Grotesk',Arial,sans-serif}
+.proof-card .result span,.proof-card .client{font-size:12px;color:var(--mute)}
+.proof-card .client{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.chip{border:1px solid var(--line);background:none;color:var(--mute);padding:7px 14px;border-radius:8px;font:400 14px 'Bebas Neue',Impact,sans-serif;letter-spacing:.08em;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--acc);color:#0a0a0a;border-color:var(--acc)}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.work{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);transform-style:preserve-3d;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.work:hover{transform:perspective(900px) rotateX(2deg) rotateY(-2deg) translateY(-5px);border-color:#55505f;box-shadow:0 20px 45px rgba(0,0,0,.28)}
+.work .ph{aspect-ratio:4/5;cursor:pointer}
+.work .ph:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 34%,transparent 70%,rgba(183,255,0,.12));opacity:.45;transition:opacity .25s}
+.work:hover .ph:after{opacity:.9}
+.work .play{width:52px;height:52px}
+.work .info{padding:14px 16px}
+.work[hidden]{display:none}
+details{border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:10px}
+summary{padding:16px 20px;cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between}
+summary:after{content:"+";color:var(--acc);font-size:18px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{padding:0 20px 18px;color:var(--mute)}
+.cta{background:radial-gradient(600px 300px at 20% 0,rgba(183,255,0,.09),transparent),var(--card);border:1px solid var(--line);border-radius:12px;padding:clamp(28px,6vw,64px)}
+footer{border-top:1px solid var(--line);padding:32px 0;margin-top:40px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:720px){.proof-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats div:nth-child(3){border-top:1px solid var(--line)}.stats div:nth-child(4){border-top:1px solid var(--line)}}
+@media(max-width:900px){.growth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.growth-columns{grid-template-columns:1fr}.growth-grid{grid-template-columns:1fr}.growth-arrow{justify-self:center;transform:rotate(90deg)}.brand-mark{width:40px;height:40px}.hero:before{top:48px;right:-.03em;width:45vw;height:45vw}}
+@media(max-width:600px){.usp-callout{align-items:flex-start;flex-direction:column;gap:5px}}
+@media(prefers-reduced-motion:reduce){.work,.work:hover{transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo brand-lockup" href="#top"><img class="brand-mark" src="leo-logo.jpeg" alt=""><span class="brand-name">MR. LEO MANAGEMENT<small>VIDEO EDITING / MOTION</small></span></a>
+  <ul><li><a href="#work">Work</a></li><li><a href="#growth">Growth</a></li><li><a href="#results">Results</a></li><li><a href="#modules">Services</a></li><li><a href="#remote">Remote process</a></li><li><a href="#faq">FAQ</a></li></ul>
+  <a class="btn p" href="#contact">Book a call</a>
+</div></nav>
+
+<header class="hero wrap" id="top">
+  <p class="mono" style="margin:0 0 18px;color:var(--teal)">Taking on select remote projects</p>
+  <h1>We Turn Content <em>Into Sales.</em></h1>
+  <p style="font-size:18px;color:var(--text)">Videos and Instagram management that turn attention into customers, with focused content built for measurable growth.</p>
+  <div class="usp-callout"><span class="mono">OUR USP</span><strong>Focused account growth. Clear progress in 2 months.</strong></div>
+  <div class="row">
+    <a class="btn p" href="#work">View selected cuts</a>
+    <a class="btn" href="https://instagram.com/mrleo_management/">@mrleo_management</a>
+    <a class="btn" href="https://wa.me/918269572724">WhatsApp</a>
+  </div>
+  <div class="stats" aria-label="Studio results and experience">
+    <div><b>4+</b><span class="mono">Years of experience</span></div>
+    <div><b>213+</b><span class="mono">Clients served</span></div>
+    <div><b>127M+</b><span class="mono">Total views</span></div>
+    <div><b>72%</b><span class="mono">Sales growth generated</span></div>
+  </div>
+
+  <!-- SHOWREEL: main playable video. Configure in VIDEOS below (id "reel") -->
+  <div class="reel">
+    <div class="mono" style="padding:12px 18px;border-bottom:1px solid var(--line)">Director's cut 2026 &nbsp;·&nbsp; 4K</div>
+    <div class="ph player" data-video="reel"><span>SHOWREEL POSTER<br>1920 × 1080 (16:9)</span><button class="play" aria-label="Play showreel"></button></div>
+    <div class="reelbar"><span class="mono">Soundtrack: your track name</span><span class="mono">Timecode 02:45</span></div>
+  </div>
+</header>
+
+<section id="approach"><div class="wrap">
+  <p class="mono">Philosophy</p>
+  <h2>Built around the story.</h2>
+  <p class="lead">Every edit starts with pacing. We engineer rhythm, retention spikes and sensory transitions that hold viewers from frame one to the final call to action.</p>
+  <div class="grid3">
+    <div class="card"><h3>Retention-engineered pacing</h3><p>Pattern interrupts and seamless speed-ramps that cut scroll fatigue and lift completion rates.</p></div>
+    <div class="card"><h3>Audio sensory design</h3><p>Layered foley, risers and sub hits synced to the frame so the sound carries the story.</p></div>
+    <div class="card"><h3>Color and 3D type</h3><p>Custom film grades and kinetic typography tracked into the scene.</p></div>
+  </div>
+</div></section>
+
+<section id="modules"><div class="wrap">
+  <p class="mono">Capabilities</p>
+  <h2>Production modules</h2>
+  <p class="lead">Built for multi-platform reach across every digital touchpoint.</p>
+  <div class="grid3">
+    <div class="card"><h3>Viral short-form</h3><p>Reels, TikTok and Shorts with hook sculpting, captions and B-roll.</p><div class="tags mono"><span>Captions</span><span>Hooks</span></div></div>
+    <div class="card"><h3>Kinetic motion and 3D type</h3><p>HUDs, animated type and 3D camera tracking.</p><div class="tags mono"><span>After Effects</span><span>Cinema 4D</span></div></div>
+    <div class="card"><h3>Commercials and brand films</h3><p>Story-led ads with cinematic grading and polish.</p><div class="tags mono"><span>DaVinci</span><span>Color grade</span></div></div>
+    <div class="card"><h3>Fitness and wellness</h3><p>High-energy trainer, gym and wellness content cut for social platforms.</p><div class="tags mono"><span>Fitness reels</span><span>Training edits</span></div></div>
+    <div class="card"><h3>YouTube long-form</h3><p>Pacing for average view duration, custom sound and documentary B-roll.</p><div class="tags mono"><span>Story arcs</span><span>Retention</span></div></div>
+    <div class="card"><h3>AI visuals and VFX</h3><p>Generated footage blended with real shots for impossible scenes.</p><div class="tags mono"><span>Gen-AI</span><span>Upscaling</span></div></div>
+    <div class="card"><h3>Monthly retainers</h3><p>Dedicated bandwidth for 12 to 30 videos a month with priority slots.</p><div class="tags mono"><span>Slots: 2 available</span></div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <p class="mono">Portfolio showcase</p>
+  <h2>Selected work</h2>
+  <div class="filters" role="group" aria-label="Filter projects">
+    <button class="chip" aria-pressed="true" data-f="all">All projects</button>
+    <button class="chip" aria-pressed="false" data-f="food">Restaurant</button>
+    <button class="chip" aria-pressed="false" data-f="estate">Real estate</button>
+    <button class="chip" aria-pressed="false" data-f="fitness">Fitness</button>
+    <button class="chip" aria-pressed="false" data-f="motion">Motion design</button>
+    <button class="chip" aria-pressed="false" data-f="auto">Automotive</button>
+    <button class="chip" aria-pressed="false" data-f="ai">AI visuals</button>
+  </div>
+  <div class="works">
+    <!-- Three video slots per category. Replace poster/video paths in the VIDEOS config below. -->
+    <article class="work" data-cat="food"><div class="ph" data-video="food1"><span>RESTAURANT VIDEO 01<br>ADD POSTER</span><button class="play" aria-label="Play restaurant video 1"></button></div><div class="info"><p class="mono">Restaurant · Video 01</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="food"><div class="ph" data-video="food2"><span>RESTAURANT VIDEO 02<br>ADD POSTER</span><button class="play" aria-label="Play restaurant video 2"></button></div><div class="info"><p class="mono">Restaurant · Video 02</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="food"><div class="ph" data-video="food3"><span>RESTAURANT VIDEO 03<br>ADD POSTER</span><button class="play" aria-label="Play restaurant video 3"></button></div><div class="info"><p class="mono">Restaurant · Video 03</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="estate"><div class="ph" data-video="estate1"><span>REAL ESTATE VIDEO 01<br>ADD POSTER</span><button class="play" aria-label="Play real estate video 1"></button></div><div class="info"><p class="mono">Real estate · Video 01</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="estate"><div class="ph" data-video="estate2"><span>REAL ESTATE VIDEO 02<br>ADD POSTER</span><button class="play" aria-label="Play real estate video 2"></button></div><div class="info"><p class="mono">Real estate · Video 02</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="estate"><div class="ph" data-video="estate3"><span>REAL ESTATE VIDEO 03<br>ADD POSTER</span><button class="play" aria-label="Play real estate video 3"></button></div><div class="info"><p class="mono">Real estate · Video 03</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="fitness"><div class="ph" data-video="fitness1"><span>FITNESS VIDEO 01<br>ADD POSTER</span><button class="play" aria-label="Play fitness video 1"></button></div><div class="info"><p class="mono">Fitness · Video 01</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="fitness"><div class="ph" data-video="fitness2"><span>FITNESS VIDEO 02<br>ADD POSTER</span><button class="play" aria-label="Play fitness video 2"></button></div><div class="info"><p class="mono">Fitness · Video 02</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="fitness"><div class="ph" data-video="fitness3"><span>FITNESS VIDEO 03<br>ADD POSTER</span><button class="play" aria-label="Play fitness video 3"></button></div><div class="info"><p class="mono">Fitness · Video 03</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="motion"><div class="ph" data-video="motion1"><span>MOTION VIDEO 01<br>ADD POSTER</span><button class="play" aria-label="Play motion video 1"></button></div><div class="info"><p class="mono">Motion design · Video 01</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="motion"><div class="ph" data-video="motion2"><span>MOTION VIDEO 02<br>ADD POSTER</span><button class="play" aria-label="Play motion video 2"></button></div><div class="info"><p class="mono">Motion design · Video 02</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="motion"><div class="ph" data-video="motion3"><span>MOTION VIDEO 03<br>ADD POSTER</span><button class="play" aria-label="Play motion video 3"></button></div><div class="info"><p class="mono">Motion design · Video 03</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="auto"><div class="ph" data-video="auto1"><span>AUTOMOTIVE VIDEO 01<br>ADD POSTER</span><button class="play" aria-label="Play automotive video 1"></button></div><div class="info"><p class="mono">Automotive · Video 01</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="auto"><div class="ph" data-video="auto2"><span>AUTOMOTIVE VIDEO 02<br>ADD POSTER</span><button class="play" aria-label="Play automotive video 2"></button></div><div class="info"><p class="mono">Automotive · Video 02</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="auto"><div class="ph" data-video="auto3"><span>AUTOMOTIVE VIDEO 03<br>ADD POSTER</span><button class="play" aria-label="Play automotive video 3"></button></div><div class="info"><p class="mono">Automotive · Video 03</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="ai"><div class="ph" data-video="ai1"><span>AI VISUAL VIDEO 01<br>ADD POSTER</span><button class="play" aria-label="Play AI visual video 1"></button></div><div class="info"><p class="mono">AI visuals · Video 01</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="ai"><div class="ph" data-video="ai2"><span>AI VISUAL VIDEO 02<br>ADD POSTER</span><button class="play" aria-label="Play AI visual video 2"></button></div><div class="info"><p class="mono">AI visuals · Video 02</p><h3>Project title to add</h3></div></article>
+    <article class="work" data-cat="ai"><div class="ph" data-video="ai3"><span>AI VISUAL VIDEO 03<br>ADD POSTER</span><button class="play" aria-label="Play AI visual video 3"></button></div><div class="info"><p class="mono">AI visuals · Video 03</p><h3>Project title to add</h3></div></article>
+  </div>
+</div></section>
+
+<section id="remote"><div class="wrap">
+  <p class="mono">Working worldwide</p>
+  <h2>Easy to brief. Clear to review. Ready to publish.</h2>
+  <p class="lead">A simple remote workflow keeps your project moving, wherever your team is based.</p>
+  <div class="grid3">
+    <div class="card"><h3>01 · Share your brief</h3><p>Tell me about your audience, platform, references and deadline.</p></div>
+    <div class="card"><h3>02 · Review together</h3><p>Get a first cut, share clear feedback and refine the edit collaboratively.</p></div>
+    <div class="card"><h3>03 · Publish confidently</h3><p>Receive finished exports sized for your platforms, with versions agreed in advance.</p></div>
+  </div>
+</div></section>
+
+<section id="growth"><div class="wrap">
+  <p class="mono">Account growth snapshots</p>
+  <h2>What changed in the last 2 months?</h2>
+  <p class="lead">Each comparison shows a creator’s account before and after a two-month period. We refresh these snapshots every 2 months.</p>
+  <div class="growth-grid">
+    <article class="growth-panel">
+      <div class="growth-meta"><span class="mono">Creator 01 · Add account name</span><span class="mono">Add date range</span></div>
+      <div class="growth-images"><div><div class="proof-image-slot"><img src="images/creator-01-before.jpg" alt="Creator 1 account before growth period"><span hidden>BEFORE IMAGE · ADD FILE</span></div><div class="growth-caption"><span>Before</span><span>Starting snapshot</span></div></div><div><div class="proof-image-slot after-slot"><img src="images/creator-01-after.jpg" alt="Creator 1 account after growth period"><span hidden>AFTER IMAGE · ADD FILE</span></div><div class="growth-caption"><span>After</span><span>2 months later</span></div></div></div>
+      <div class="growth-numbers"><div class="growth-metric"><span>Followers</span><b>— → —</b></div><div class="growth-metric"><span>Reach</span><b>— → —</b></div><div class="growth-metric"><span>Enquiries / sales</span><b>— → —</b></div></div>
+    </article>
+    <article class="growth-panel">
+      <div class="growth-meta"><span class="mono">Creator 02 · Add account name</span><span class="mono">Add date range</span></div>
+      <div class="growth-images"><div><div class="proof-image-slot"><img src="images/creator-02-before.jpg" alt="Creator 2 account before growth period"><span hidden>BEFORE IMAGE · ADD FILE</span></div><div class="growth-caption"><span>Before</span><span>Starting snapshot</span></div></div><div><div class="proof-image-slot after-slot"><img src="images/creator-02-after.jpg" alt="Creator 2 account after growth period"><span hidden>AFTER IMAGE · ADD FILE</span></div><div class="growth-caption"><span>After</span><span>2 months later</span></div></div></div>
+      <div class="growth-numbers"><div class="growth-metric"><span>Followers</span><b>— → —</b></div><div class="growth-metric"><span>Reach</span><b>— → —</b></div><div class="growth-metric"><span>Enquiries / sales</span><b>— → —</b></div></div>
+    </article>
+  </div>
+  <p class="growth-foot">Add the six before/after images to the images folder using the filenames shown above. Replace the sample text with each creator’s real account name, date range and metrics.</p>
+</div></section>
+
+<section id="results"><div class="wrap">
+  <p class="mono">Client stories</p>
+  <h2>Good work. Real outcomes.</h2>
+  <p class="lead">Add approved client feedback and the results behind each project. Replace the prompts below with verified quotes, names and metrics before publishing.</p>
+  <div class="proof-grid">
+    <article class="proof-card"><span class="mono">Client testimonial / 01</span><blockquote>“Add a short client quote about the project and the experience of working together.”</blockquote><div class="result"><b>—</b><span>Enter a real outcome and timeframe</span></div><div class="client"><span>Client name</span><span>Project / service</span></div></article>
+    <article class="proof-card"><span class="mono">Client testimonial / 02</span><blockquote>“Add a second approved quote that explains what changed after the content went live.”</blockquote><div class="result"><b>—</b><span>Enter a real outcome and timeframe</span></div><div class="client"><span>Client name</span><span>Project / service</span></div></article>
+    <article class="proof-card"><span class="mono">Client testimonial / 03</span><blockquote>“Add another client voice to show the range of projects and outcomes.”</blockquote><div class="result"><b>—</b><span>Enter a real outcome and timeframe</span></div><div class="client"><span>Client name</span><span>Project / service</span></div></article>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <p class="mono">Inquiries and workflow</p>
+  <h2>Frequently asked questions</h2>
+  <details><summary>What kind of video content do you edit?</summary><p>Short-form, YouTube, ads, brand films, motion graphics and AI-assisted visuals.</p></details>
+  <details><summary>Do you work with creators, brands, or both?</summary><p>Both. Answer in your own words here.</p></details>
+  <details><summary>Can you work with existing raw footage?</summary><p>Yes. Share files through Frame.io, Drive or WeTransfer.</p></details>
+  <details><summary>How long does an edit usually take?</summary><p>Short-form in 24 to 48 hours; long-form in 3 to 5 days. Edit to match your real timelines.</p></details>
+  <details><summary>Can you handle recurring content every month?</summary><p>Yes, through monthly retainers with priority slots.</p></details>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="cta">
+  <p class="mono" style="color:var(--teal)">Ready when you are</p>
+  <h2 style="font-size:clamp(40px,6vw,72px)">Let's work together.</h2>
+  <p class="lead" style="margin-bottom:24px">Tell me what you’re creating, who it’s for and when you need it. I work remotely with creators, brands and businesses.</p>
+  <p class="capacity-note"><b>10</b><span>I work with up to 10 active clients at a time, so every account gets focused strategy, consistent execution and hands-on attention.</span></p>
+  <div class="row">
+    <a class="btn p" href="https://instagram.com/mrleo_management/">Instagram · @mrleo_management</a>
+    <a class="btn" href="https://wa.me/918269572724">WhatsApp · +91 82695 72724</a>
+    <a class="btn" href="mailto:mrleomanagement13@gmail.com">Email · mrleomanagement13@gmail.com</a>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <div><b class="logo brand-lockup"><img class="brand-mark" src="leo-logo.jpeg" alt=""><span class="brand-name">MR. LEO MANAGEMENT<small>VIDEO EDITING / MOTION</small></span></b><p class="mono" style="margin-top:10px">Precision pacing. Cinematic polish.</p></div>
+  <p class="mono">© 2026 MR. LEO MANAGEMENT. ALL RIGHTS RESERVED.</p>
+</div></footer>
+
+<script>
+/* ============ VIDEO CONFIG: edit this only ============
+ type: "mp4"     -> src is a direct file URL (.mp4/.webm) you host
+ type: "youtube" -> src is the 11-char video ID
+ type: "vimeo"   -> src is the numeric video ID
+ poster: optional thumbnail image URL (used as the card background)  */
+const VIDEOS = {
+  reel:     { type: "mp4", src: "videos/showreel.mp4", poster: "images/showreel.jpg" },
+  food1:    { type: "mp4", src: "videos/restaurant-01.mp4", poster: "images/restaurant-01.jpg" },
+  food2:    { type: "mp4", src: "videos/restaurant-02.mp4", poster: "images/restaurant-02.jpg" },
+  food3:    { type: "mp4", src: "videos/restaurant-03.mp4", poster: "images/restaurant-03.jpg" },
+  estate1:  { type: "mp4", src: "videos/real-estate-01.mp4", poster: "images/real-estate-01.jpg" },
+  estate2:  { type: "mp4", src: "videos/real-estate-02.mp4", poster: "images/real-estate-02.jpg" },
+  estate3:  { type: "mp4", src: "videos/real-estate-03.mp4", poster: "images/real-estate-03.jpg" },
+  fitness1: { type: "mp4", src: "videos/fitness-01.mp4", poster: "images/fitness-01.jpg" },
+  fitness2: { type: "mp4", src: "videos/fitness-02.mp4", poster: "images/fitness-02.jpg" },
+  fitness3: { type: "mp4", src: "videos/fitness-03.mp4", poster: "images/fitness-03.jpg" },
+  motion1:  { type: "mp4", src: "videos/motion-01.mp4", poster: "images/motion-01.jpg" },
+  motion2:  { type: "mp4", src: "videos/motion-02.mp4", poster: "images/motion-02.jpg" },
+  motion3:  { type: "mp4", src: "videos/motion-03.mp4", poster: "images/motion-03.jpg" },
+  auto1:    { type: "mp4", src: "videos/automotive-01.mp4", poster: "images/automotive-01.jpg" },
+  auto2:    { type: "mp4", src: "videos/automotive-02.mp4", poster: "images/automotive-02.jpg" },
+  auto3:    { type: "mp4", src: "videos/automotive-03.mp4", poster: "images/automotive-03.jpg" },
+  ai1:      { type: "mp4", src: "videos/ai-visual-01.mp4", poster: "images/ai-visual-01.jpg" },
+  ai2:      { type: "mp4", src: "videos/ai-visual-02.mp4", poster: "images/ai-visual-02.jpg" },
+  ai3:      { type: "mp4", src: "videos/ai-visual-03.mp4", poster: "images/ai-visual-03.jpg" }
+};
+/* ======================================================= */
+
+document.querySelectorAll(".proof-image-slot img").forEach(image => {
+  const fallback = image.nextElementSibling;
+  image.addEventListener("load", () => { fallback.hidden = true; });
+  image.addEventListener("error", () => { image.hidden = true; fallback.hidden = false; });
+});
+
+document.querySelectorAll("[data-video]").forEach(box => {
+  const cfg = VIDEOS[box.dataset.video];
+  if (cfg && cfg.poster) {
+    const posterImage = new Image();
+    posterImage.onload = () => {
+      box.style.background = "center/cover url('" + cfg.poster + "')";
+      const label = box.querySelector("span");
+      if (label) label.style.display = "none";
+    };
+    posterImage.src = cfg.poster;
+  }
+  const start = () => {
+    if (!cfg || /HERE/.test(cfg.src)) { box.querySelector("span").textContent = "Add a video link in VIDEOS"; return; }
+    let el;
+    if (cfg.type === "mp4") {
+      el = document.createElement("video");
+      el.src = cfg.src; el.controls = true; el.autoplay = true; el.playsInline = true;
+      if (cfg.poster) el.poster = cfg.poster;
+      el.addEventListener("error", () => {
+        const note = document.createElement("span");
+        note.textContent = "Add video file: " + cfg.src;
+        box.replaceChildren(note);
+        box.style.cursor = "pointer";
+      });
+    } else {
+      el = document.createElement("iframe");
+      el.allow = "autoplay; fullscreen; picture-in-picture"; el.allowFullscreen = true;
+      el.src = cfg.type === "youtube"
+        ? "https://www.youtube-nocookie.com/embed/" + cfg.src + "?autoplay=1&rel=0"
+        : "https://player.vimeo.com/video/" + cfg.src + "?autoplay=1";
+    }
+    box.replaceChildren(el);
+    box.style.cursor = "default";
+  };
+  box.addEventListener("click", start, { once: true });
+});
+
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+  document.querySelectorAll(".work").forEach(w => w.hidden = c.dataset.f !== "all" && w.dataset.cat !== c.dataset.f);
+}));
+</script>
+</body>
+</html>

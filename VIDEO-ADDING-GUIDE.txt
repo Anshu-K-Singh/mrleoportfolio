@@ -1,0 +1,40 @@
+VIDEO ADDING GUIDE
+==================
+
+Keep these items together in the Portfolio folder:
+- Mr. Leo Management - Final.html
+- leo-logo.jpeg
+- the images folder
+- the videos folder
+
+STEP 1 — Add your video files
+Copy your MP4 files into the videos folder and rename them to the matching filenames below. MP4 (H.264) is recommended.
+
+Showreel:       showreel.mp4
+Restaurants:    restaurant-01.mp4, restaurant-02.mp4, restaurant-03.mp4
+Real estate:    real-estate-01.mp4, real-estate-02.mp4, real-estate-03.mp4
+Fitness:        fitness-01.mp4, fitness-02.mp4, fitness-03.mp4
+Motion design:  motion-01.mp4, motion-02.mp4, motion-03.mp4
+Automotive:     automotive-01.mp4, automotive-02.mp4, automotive-03.mp4
+AI visuals:     ai-visual-01.mp4, ai-visual-02.mp4, ai-visual-03.mp4
+
+STEP 2 — Add poster images (optional)
+Copy a JPG thumbnail into the images folder using the same base name, for example:
+restaurant-01.jpg for restaurant-01.mp4
+fitness-01.jpg for fitness-01.mp4
+showreel.jpg for showreel.mp4
+
+The poster files are optional. Without one, the designed video placeholder remains visible until playback starts.
+
+STEP 3 — Open and preview
+Open Mr. Leo Management - Final.html in your browser. Click a category filter, then click a video poster to play it. If a file is missing, the page shows the filename it expects.
+
+STEP 4 — Add before/after account proof
+The growth section expects these files in the images folder:
+creator-01-before.jpg, creator-01-after.jpg
+creator-02-before.jpg, creator-02-after.jpg
+
+STEP 5 — Publish/share the site
+When publishing online, upload the HTML file, logo, videos folder and images folder together, preserving these names and folder structure. For hosted video links instead of local MP4 files, update that video's src in the VIDEOS section near the bottom of the HTML.
+
+Optional: Rename each “Project title to add” in the HTML so it matches the video and client project.
